@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="text-center">
+        <h1 class="fs-1 fw-bold">Artworks</h1>
+        {% for artwork in artworks_list %}
+            <a href=""><img class="rounded m-4" src="{{ artwork.image.url }}"
+                            style="width:350px;height: 350px;object-fit: cover"
+                            alt="{{ artwork.title }}"></a>
+        {% endfor %}
+    </div>
+{% endblock %}

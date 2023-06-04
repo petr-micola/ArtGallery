@@ -33,7 +33,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='artwork',
             name='image',
-            field=models.ImageField(blank=True, help_text='Upload an image of the artwork', null=True, upload_to='images/', verbose_name='Artwork image'),
+            field=models.ImageField(blank=True, help_text='Upload an image of the artwork', null=True, upload_to='img/', verbose_name='Artwork image'),
         ),
         migrations.AlterField(
             model_name='artwork',

@@ -17,7 +17,7 @@ class Migration(migrations.Migration):
                 ('name', models.CharField(help_text='Enter a name of the author.', max_length=50, verbose_name='Author name')),
                 ('born_year', models.IntegerField(blank=True, help_text='Enter a born year of the author.', null=True, verbose_name='Author born year')),
                 ('biography', models.TextField(blank=True, help_text='Enter a biography of the author.', null=True, verbose_name='Author biography')),
-                ('image', models.ImageField(blank=True, help_text='Upload an image of the author.', null=True, upload_to='images/authors/', verbose_name='Author image')),
+                ('image', models.ImageField(blank=True, help_text='Upload an image of the author.', null=True, upload_to='img/authors/', verbose_name='Author image')),
             ],
             options={
                 'verbose_name': 'Author',
@@ -36,7 +36,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='artwork',
             name='image',
-            field=models.ImageField(blank=True, help_text='Upload an image of the artwork.', null=True, upload_to='images/artworks/', verbose_name='Artwork image'),
+            field=models.ImageField(blank=True, help_text='Upload an image of the artwork.', null=True, upload_to='img/artworks/', verbose_name='Artwork image'),
         ),
         migrations.AddField(
             model_name='artwork',
