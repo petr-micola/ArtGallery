@@ -1,3 +1,3 @@
 # ArtGallery
 Webová aplikace v Djangu.
-DB username: admin, password: admin
+Administrace - username: admin, password: admin
