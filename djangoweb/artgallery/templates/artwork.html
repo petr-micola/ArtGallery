@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="p-5 text-white text-center"
+         style="background-image: url('{{ artwork_detail.image.url }}');box-shadow: inset 0 0 0 100vh rgba(0,0,0,.6);
+                 background-repeat: no-repeat;background-size:cover;background-position: center;height:auto;">
+        <h1 class="fs-1 fw-bold">{{ artwork_detail.title }}</h1>
+        <div class="container">
+            <div class="row text-start">
+                <div class="col-12 col-xl-6">
+                    <img class="rounded mx-auto d-block m-4" src="{{ artwork_detail.image.url }}"
+                         style="max-width:500px;"
+                         alt="{{ newest_art.title }}">
+                </div>
+                <div class="col-12 col-xl-6 mt-5">
+                    <p><span class="fs-5 fw-bold">{% for author in artwork_detail.author.all %}
+                        {{ author.name }}{% endfor %}</span> {{ artwork_detail.year }}</p>
+                    <p>{% for genre in artwork_detail.genre.all %}{{ genre.name }} {% endfor %}</p>
+                    <p>{{ artwork_detail.description }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

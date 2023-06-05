@@ -4,7 +4,7 @@
          style="background-image: url('{{ newest_art.image.url }}');box-shadow: inset 0 0 0 100vh rgba(0,0,0,.6);
                  background-repeat: no-repeat;background-size:cover;background-position: center;height:auto;">
         <h1 class="fs-1 fw-bold">Newest art</h1>
-        <a href=""><img class="rounded mx-auto d-block m-4" src="{{ newest_art.image.url }}"
+        <a href="{% url 'artwork' newest_art.pk %}"><img class="rounded mx-auto d-block m-4 hover-zoom" src="{{ newest_art.image.url }}"
                         style="max-width:500px;"
                         alt="{{ newest_art.title }}"></a>
         <p><span class="fs-5 fw-bold">{{ newest_art.title }}</span> by
@@ -13,7 +13,7 @@
     <div class="p-5 text-center">
         <h2 class="fs-2 fw-bold">Featured art</h2>
         {% for featured_art in featured_art.all %}
-            <a href=""><img class="rounded m-4" src="{{ featured_art.image.url }}"
+            <a href="{% url 'artwork' featured_art.pk %}"><img class="rounded m-4 hover-zoom" src="{{ featured_art.image.url }}"
                             style="width:350px;height: 350px;object-fit: cover"
                             alt="{{ featured_art.title }}"></a>
         {% endfor %}
